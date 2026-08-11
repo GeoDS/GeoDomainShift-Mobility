@@ -1,17 +1,19 @@
-# Quantifying geographic domain shift to decouple the geographic transferability of human mobility flow generations
+# GeoDomainShift-Mobility
+
+**Quantifying geographic domain shift to decouple the geographic transferability of human mobility flow generations**
 
 **Abstact**: Human mobility serves as an essential proxy for understanding social, economic, and environmental dynamics in urban systems. However, since human mobility data are often scarce due to high collection costs and privacy concerns, generating them from limited mobility observations or auxiliary data sources is highly needed. Geographic transferability, which measures the capability of a model in a new or unseen region, is a critical dimension to compare different human mobility generation models. However, few studies have studied the intrinsic characteristics of geographic transferability. To this end, this study systematically investigates the geographic transferability of four representative human mobility generation models using a large-scale benchmark dataset of census tract–level commuting flows across 2,265 counties in the United States. Inspired by domain adaptation theory in machine learning, we introduce geographic domain shift to describe the intrinsic differences in geographic feature distributions and spatial structures between source and target regions, which may jointly affect model transferability. Moreover, we propose two metrics, mutual information and spatial shift, to quantify the geographic domain shift. To examine their associations with geographic transferability, we employ linear mixed-effects regression to analyze the associations between geographic domain shifts and transferability. Our results reveal substantial heterogeneity and asymmetry in geographic transferability across regions. Both information shift and spatial shift exhibit statistically significant and complementary explanatory power. This indicates that geospatial transferability depends not only on model design but also on intrinsic geographic differences. These findings provide a novel methodological framework for evaluating and improving the geographic transferability of human mobility generation models and support more robust and fair human mobility data synthesis across diverse regions. It also offers insights on spatial transferability for GeoAI model development.
 
 <img src='assets/workflow.jpg' width='780px'>
 
-### 1. Structure
+### 1. File Structure
 
 ```text
 ├── data
 ├── assets
-	├── Boundaries_Regions_within_Areas
-	├── img.png
-	└── workflow.jpg
+    ├── Boundaries_Regions_within_Areas
+    ├── img.png
+    └── workflow.jpg
 ├── geo_data
 └── models
     ├── 01_dataset-statisitcs.ipynb                   # Compute the statistics of the dataset
