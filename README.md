@@ -25,13 +25,13 @@
     └── RF_states                                     # Random foreset model implementation
 ```
 
-## 2. Data Description
+## 2. Implementations
+
+### 2.1 Data
 
 We use a large-scael commuting OD flow dataset, which is developed by [Tsinghua Fib Lab](https://github.com/tsinghua-fib-lab), as our comprehensive evaluations of geographic transferability of human mobility flow generations. In this repo, the *data* and *assests/Boundaries_Regions_within_Areas* folders are both empty. Please download the them via: https://github.com/tsinghua-fib-lab/CommutingODGen-Dataset, which are in the directories with same names.
 
-## 2. Human mobility generation model implementations
-
-### 2.1. Code adaptation of human mobility flow generaations
+### 2.2. Adaptation of human mobility generation models
 
 The four representative human mobility generation models include: DeepGravity, RF, GBRT, and GMEL. The codes are adapted from the implementations of Tsinghua Fib Lab: https://github.com/tsinghua-fib-lab/CommutingODGen-Dataset. Specfically, take the DeepGravity model under *models* as an example:
 
@@ -39,7 +39,7 @@ The four representative human mobility generation models include: DeepGravity, R
 * To enable the spatially held-out training, we developed an ODFlowDataset dataloader, which is detailed in *utils.py* file.
 * Furthermore, we added the functions of loading data and constructing training sets and test sets by states, *load_state_areas()*, *load_data_by_states.py* in *data_load.py* file.
 
-### 2.2. Geographic domain shift quantification and analysis
+### 2.3. Geographic domain shift quantification and analysis
 
 * Please run *01_dataset-statisitcs.ipynb* to get the descriptive statistics of the used dataset.
 * Please run *02_spatial_domain_quantification.ipynb* to quantify the geographic domain shift across different U.S states.
