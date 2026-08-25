@@ -4,6 +4,25 @@
 
 **Abstact**: Human mobility serves as an essential proxy for understanding social, economic, and environmental dynamics in urban systems. However, since human mobility data are often scarce due to high collection costs and privacy concerns, generating them from limited mobility observations or auxiliary data sources is needed. Geospatial transferability, which measures the capability of a model in a new location or unseen region, is a critical dimension to compare different human mobility generation models. However, few studies have studied the intrinsic characteristics of geospatial transferability. To this end, this study systematically investigates the geospatial transferability of four representative human mobility generation models using a large-scale benchmark dataset of census tract–level commuting flows across 2,265 counties in the United States. Inspired by domain adaptation theory in machine learning, we introduce geographic domain shift to describe the intrinsic differences in geographic feature distributions and spatial structures between source and target regions, which may jointly affect model transferability. Moreover, we propose two metrics, mutual information and spatial shift, to quantify the geographic domain shift. To examine their associations with geospatial transferability, we employ linear mixed-effects regression to analyze the associations between geographic domain shifts and transferability. Our results reveal substantial heterogeneity and asymmetry in geographic transferability across regions. Both information shift and spatial shift exhibit statistically significant and complementary explanatory power. This indicates that geospatial transferability depends not only on model design but also on intrinsic geographic differences. These findings provide a novel methodological framework for evaluating and improving the geospatial transferability of human mobility generation models and support more robust and fair human mobility data synthesis across diverse regions. It also offers insights on spatial transferability for GeoAI model development.
 
+## Reference
+If you find our code or ideas useful for your research, please cite our paper:
+
+*Zhou, Z., Gao, S., Zhang, Q., Zhang, F., &  Du, Z. (2026). [Quantifying geographic domain shift to decouple the geospatial transferability of human mobility flow generations](https://arxiv.org/abs/2608.21567), Annals of the American Association of Geographers.*
+
+```
+@article{zhou202quantifying,
+  title={Quantifying geographic domain shift to decouple the geospatial transferability of human mobility flow generations},
+  author={Zhiyong Zhou and Song Gao and Qianheng Zhang and Feng Zhang and Zhenhong Du.},
+  journal={Annals of the American Association of Geographers},
+  volume={2026},
+  number={116},
+  pages={1--28},
+  year={2026},
+  doi={10.1080/2608.21567}
+  publisher={Taylor and Francis }
+}
+```
+
 <img src='assets/workflow.jpg' width='780px'>
 
 ### 1. File Structure
